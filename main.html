@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div>
+        <p class="name-movie">
+          <span class="name-1">CINEMA</span>
+          <span class="name-2">NIA</span>
+        </p>
+    </div>
+    <div>
+        <p class="text-res">Result :</p>
+    </div>
+    <div id="movieResult" ></div>
+
+    <script>
+        function imageClick() {
+            let apiKey = 'e66a6b'
+            let movie_Title = new URLSearchParams(window.location.search).get('movie_title')
+            console.log(movie_Title)
+
+            $.ajax({
+                url: 'https://www.omdbapi.com/?apikey=' + apiKey + '&s=' + movie_Title,
+                method: 'GET',
+                dataType: 'json',
+                success: function(result) {
+                    if (result.Response === 'True') {
+                        let movieData = '<div class="grid-container">';
+
+                        result.Search.forEach(function(movie, index) {
+                            movieData += `
+                                <div class="grid-item">
+                                    <img class="img" src="${movie.Poster}" alt="${index + 1}" />
+                                    <h3>${movie.Title}</h3>
+                                    <h4>${movie.Year}</h4>
+                                    <h4>13+</h4>
+                                </div>
+                            `
+                        })
+
+                        movieData += '</div>'
+                        $('#movieResult').html(movieData)
+                        
+                    
+                    }
+                }
+            })
+        }
+        window.onload = imageClick
+    </script>
+</body>
+</html>

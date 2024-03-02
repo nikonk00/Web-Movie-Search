@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="bg">
+    <div>
+        <p class="name-movie">
+          <span class="name-1">CINEMA</span>
+          <span class="name-2">NIA</span></p>
+    </div>
+    <div>
+        <input class="input" type="text" id="movie_Title" placeholder="Movie Title" />
+        <img class="img-search" id="movieTitle" src="./asset/search.png" alt="search" onclick="imageClick()">
+    </div>
+    <div>
+        <p class="txt-rec">Disarankan Untuk Anda</p>
+    </div>
+    <div class="grid-container2">
+        <div class="grid-item2">
+            <Img src="https://m.media-amazon.com/images/M/MV5BNWI1NjkxM2MtOTU4My00YzQ5LTliNGMtNmFlM2U5NWM3MDY1XkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg" alt="1"  />
+            <h3>Transformers</h3>
+            <h4>2007</h4>
+            <h4>13+</h4>
+    </div>
+
+    <script>
+        function imageClick() {
+        let apiKey = 'e66a6b'
+
+        let movie_Title = document.getElementById('movie_Title').value
+
+        window.location.href = 'main.html?movie_title=' + movie_Title
+        }
+    </script>
+</body>
+</html>

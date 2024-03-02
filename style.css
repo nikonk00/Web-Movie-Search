@@ -1,0 +1,165 @@
+body {
+  background-color: #AB3D3D; 
+}
+
+.bg {
+  background: url('./asset/card-img.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  margin: 0; 
+  padding: 0;
+  height: 100vh; 
+  display: flex; 
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+  height: max-content;
+  margin: 40px auto; 
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px; 
+  justify-content: center;
+}
+
+.grid-item {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  background-color: #AB3D3D;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: white;
+}
+
+.grid-item img{
+  width: 300px;
+  height: 320px;
+}
+
+.grid-item h3,h4 {
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  line-height: 1.2em;
+}
+
+.name-movie {
+  margin-left: 40px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.name-1 {
+  color: #3c3005;
+  font-size: 52px;
+  font-style: normal;
+  font-family: "Permanent Marker";
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.name-2 {
+  color: #e9fd0e;
+  font-size: 52px;
+  font-style: normal;
+  font-family: "Permanent Marker";
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.input{
+  width: 30vh;
+  height: 30px;
+  position: fixed;
+  top: 35px;
+  right: 35px;
+}
+
+.img-search{
+  height: 25px;
+  position: fixed;
+  top: 40px;
+  right: 45px;
+}
+
+.txt-rec{
+  position: absolute;
+  margin-top: 60vh;
+  left: 40px;
+  font-size: 30px;
+  font-family: "roboto";
+  color: #e4ffff;
+}
+
+.text-res{
+  position: absolute;
+  margin-top: 1vh;
+  left: 45px;
+  font-size: 30px;
+  font-family: "source sans pro";
+  color: #000000;
+}
+
+.grid-container2 {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  width: 100%;
+  max-width: 1200px;
+  height: max-content;
+  margin: 40px auto; 
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px; 
+  justify-content: center;
+}
+
+.grid-container2 {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  width: 100%;
+  max-width: 1200px;
+  height: max-content;
+  margin: 25px auto; 
+  margin-top: 65px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px; 
+  justify-content: center;
+}
+
+.grid-item2 {
+  width: 100%;
+  max-width: 300px;
+  height: 320px;
+  background-color: rgba(255, 0, 0, 0.5);
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: white;
+}
+
+.grid-item2 img{
+  width: 240px;
+  height: 250px;
+}
+
+.grid-item2 h3,h4 {
+  text-align: start;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  line-height: 1.2em;
+}
